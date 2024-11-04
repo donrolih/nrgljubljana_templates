@@ -1,0 +1,116 @@
+NRG Ljubljana 2023.05 (c) Rok Zitko, rok.zitko@ijs.si, 2005-2023
+Mathematica version: 14.0.0 for Mac OS X ARM (64-bit) (December 13, 2023)
+sneg version: 2.0.7
+Loading module initialparse.m
+Loading module sym.m
+Options: {GENERATE_TEMPLATE, GENERATE_TEMPLATE_ALL}
+Loading module models.m
+models started
+Loading module custommodels.m
+Can't load custommodels.m. Continuing.
+Loading module SIAM.m
+def1ch, NRDOTS=1
+H0=coefzeta[2, 0]*(-1/2 + nc[f[0, 0, 0], f[1, 0, 0]]) + coefzeta[1, 0]*(-1/2 + nc[f[0, 0, 1], f[1, 0, 1]])
+"SigmaHartree[UP]="-nc[d[0, 1], d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + nc[d[0, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 1]] - nc[d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1]] - 
+   nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1], d[1, 1]] + U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+"SigmaHartree[DO]="-nc[d[0, 0], d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + nc[d[0, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 0]] - nc[d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0]] - 
+   nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0], d[1, 0]] + U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+"SigmaHartree="(-nc[d[0, 0], d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + nc[d[0, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 0]] - nc[d[0, 1], d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + 
+     nc[d[0, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 1]] - nc[d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0]] - nc[d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1]] - 
+     nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0], d[1, 0]] - nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1], d[1, 1]] + 2*U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]])/2
+NRDOTS:1 CHANNELS:1 COEFCHANNELS:2
+basis:{d[], f[0]}
+Hamiltonian generated. -1/2*coefzeta[1, 0] - coefzeta[2, 0]/2 - (B1*nc[d[0, 0], d[1, 0]])/2 + eps1*nc[d[0, 0], d[1, 0]] + gammaPolCh[1]*nc[d[0, 0], f[1, 0, 0]] + (B1*nc[d[0, 1], d[1, 1]])/2 + eps1*nc[d[0, 1], d[1, 1]] + 
+   gammaPolCh[1]*nc[d[0, 1], f[1, 0, 1]] + gammaPolCh[1]*nc[f[0, 0, 0], d[1, 0]] + coefzeta[2, 0]*nc[f[0, 0, 0], f[1, 0, 0]] + gammaPolCh[1]*nc[f[0, 0, 1], d[1, 1]] + coefzeta[1, 0]*nc[f[0, 0, 1], f[1, 0, 1]] - 
+   U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+SCALE[0]=1.0201394465967895
+faktor=1.3862943611198906
+Generating basis
+Wilson chain
+DISCNMAX=0
+BAND="flat" thetaCh={"2.", "2."}
+Discretization (channel 1)
+"xitable" (channel 1)
+xi(1.)(0)
+"zetatable" (channel 1)
+dzeta(1.)(0)
+Precision last xi:Infinity
+Precision last zeta: Infinity
+Discretization (channel 2)
+"xitable" (channel 2)
+xi(2.)(0)
+"zetatable" (channel 2)
+dzeta(2.)(0)
+Precision last xi:Infinity
+Precision last zeta: Infinity
+Discretization done.
+thetaCh={"2.", "2."}
+theta0Ch={"0.2", "0.2"}
+gammaPolCh={"0.252313252202016", "0.252313252202016"}
+calcgsenergy[]
+diagvc[{-2, 1}]
+Generating matrix: ham_-2.1
+hamil={{(-coefzeta[1, 0] - coefzeta[2, 0])/2}}
+dim={1, 1}
+diagvc[{-1, 0}]
+Generating matrix: ham_-1.0
+hamil={{(-coefzeta[1, 0] + coefzeta[2, 0])/2, gammaPolCh[1]}, {gammaPolCh[1], (-B1 + 2*eps1 - coefzeta[1, 0] - coefzeta[2, 0])/2}}
+dim={2, 2}
+diagvc[{-1, 2}]
+Generating matrix: ham_-1.2
+hamil={{(coefzeta[1, 0] - coefzeta[2, 0])/2, gammaPolCh[1]}, {gammaPolCh[1], (B1 + 2*eps1 - coefzeta[1, 0] - coefzeta[2, 0])/2}}
+dim={2, 2}
+diagvc[{0, -1}]
+Generating matrix: ham_0.-1
+hamil={{(-B1 + 2*eps1 - coefzeta[1, 0] + coefzeta[2, 0])/2}}
+dim={1, 1}
+diagvc[{0, 1}]
+Generating matrix: ham_0.1
+hamil={{(coefzeta[1, 0] + coefzeta[2, 0])/2, -gammaPolCh[1], gammaPolCh[1], 0}, {-gammaPolCh[1], (-B1 + 2*eps1 + coefzeta[1, 0] - coefzeta[2, 0])/2, 0, -gammaPolCh[1]}, 
+   {gammaPolCh[1], 0, (B1 + 2*eps1 - coefzeta[1, 0] + coefzeta[2, 0])/2, gammaPolCh[1]}, {0, -gammaPolCh[1], gammaPolCh[1], 2*eps1 + U1 - coefzeta[1, 0]/2 - coefzeta[2, 0]/2}}
+dim={4, 4}
+diagvc[{0, 3}]
+Generating matrix: ham_0.3
+hamil={{(B1 + 2*eps1 + coefzeta[1, 0] - coefzeta[2, 0])/2}}
+dim={1, 1}
+diagvc[{1, 0}]
+Generating matrix: ham_1.0
+hamil={{(-B1 + 2*eps1 + coefzeta[1, 0] + coefzeta[2, 0])/2, -gammaPolCh[1]}, {-gammaPolCh[1], (4*eps1 + 2*U1 - coefzeta[1, 0] + coefzeta[2, 0])/2}}
+dim={2, 2}
+diagvc[{1, 2}]
+Generating matrix: ham_1.2
+hamil={{(B1 + 2*eps1 + coefzeta[1, 0] + coefzeta[2, 0])/2, -gammaPolCh[1]}, {-gammaPolCh[1], (4*eps1 + 2*U1 + coefzeta[1, 0] - coefzeta[2, 0])/2}}
+dim={2, 2}
+diagvc[{2, 1}]
+Generating matrix: ham_2.1
+hamil={{(4*eps1 + 2*U1 + coefzeta[1, 0] + coefzeta[2, 0])/2}}
+dim={1, 1}
+Lowest energies (absolute):{1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 4}
+Lowest energies (GS shifted):{0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 3}
+Scale factor SCALE(Ninit):1.0201394465967895
+Lowest energies (shifted and scaled):{0., 0., 0., 0., 0., 0., 0., 0., 0., 0.9802581434685472, 0.9802581434685472, 0.9802581434685472, 0.9802581434685472, 0.9802581434685472, 1.9605162869370945, 2.9407744304056416}
+makeireducf GENERAL
+Loading module operators.m
+operators.m started
+s: n_d nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]]
+s: n_d_u nc[d[0, 1], d[1, 1]]
+s: n_d_d nc[d[0, 0], d[1, 0]]
+s: n_d^2 nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]] - 2*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+s: hop0 nc[d[0, 0], f[1, 0, 0]] + nc[d[0, 1], f[1, 0, 1]] + nc[f[0, 0, 0], d[1, 0]] + nc[f[0, 0, 1], d[1, 1]]
+d: A_d d
+d: self_d Chop[Expand[komutator[Hint, d[#1, #2]]]] & 
+s: SZd -1/2*nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]]/2
+operators.m done
+Loading module customoperators.m
+Can't load customoperators.m. Continuing.
+Loading module modeloperators.m
+s: SigmaHartree-u U1*nc[d[0, 0], d[1, 0]]
+s: SigmaHartree-d U1*nc[d[0, 1], d[1, 1]]
+Timing report
+{basis, 0.002985`3.9264893289613587}
+{ham, 0.054795`4.2360434153242466}
+{maketable, 0.321319`5.958481400190313}
+{xi, 0.002811`3.9004058391034135}
+{_, 0}
+data.in
+"Success!"
