@@ -1,0 +1,7 @@
+# Don Rolih, Nov 2024, New York
+
+Testing the new implementation of 'sigma-trick' for nrgljubljana_interface.
+Main reference: Fabian B. Kugler, PRB 105, 245132 (2022)
+
+For each of the templates calculate the self-energy using the 'old' (Bulla et. al.) and the
+'new' (Kugler) estimator. Each folder contains a python script used to produce the results.
