@@ -1,0 +1,106 @@
+NRG Ljubljana 2023.05 (c) Rok Zitko, rok.zitko@ijs.si, 2005-2023
+Mathematica version: 13.3.0 for Linux x86 (64-bit) (June 3, 2023)
+sneg version: 2.0.7
+Loading module initialparse.m
+Loading module sym.m
+Options: {GENERATE_TEMPLATE, GENERATE_TEMPLATE_ALL}
+Loading module models.m
+models started
+Loading module custommodels.m
+Can't load custommodels.m. Continuing.
+Loading module model.m
+def1ch, NRDOTS=1
+H0=-(coefdelta[1, 0]*nc[f[0, 0, 0], f[0, 0, 1]]) + coefzeta[1, 0]*(-1 + nc[f[0, 0, 0], f[1, 0, 0]] + nc[f[0, 0, 1], f[1, 0, 1]]) + Conjugate[coefdelta[1, 0]]*nc[f[1, 0, 0], f[1, 0, 1]]
+"selfopd[CR,UP]="-(U1*nc[d[0, 0], d[0, 1], d[1, 0]])
+"selfopd[CR,DO]="U1*nc[d[0, 0], d[0, 1], d[1, 1]]
+"selfopd[AN,UP]="-(U1*nc[d[0, 0], d[1, 0], d[1, 1]])
+"selfopd[AN,DO]="U1*nc[d[0, 1], d[1, 0], d[1, 1]]
+"selfopcd[CR,UP]="-(U1*nc[d[0, 1], d[1, 0], d[1, 1]])
+"selfopcd[CR,DO]="-(U1*nc[d[0, 0], d[1, 0], d[1, 1]])
+"selfopcd[AN,UP]="-(U1*nc[d[0, 0], d[0, 1], d[1, 1]])
+"selfopcd[AN,DO]="-(U1*nc[d[0, 0], d[0, 1], d[1, 0]])
+"SigmaH11[CR, UP, AN, UP]="U1*nc[d[0, 0], d[1, 0]]
+"SigmaH12[AN, DO, AN, UP]="U1*nc[d[1, 0], d[1, 1]]
+"SigmaH21[CR, UP, CR, DO]="-(U1*nc[d[0, 0], d[0, 1]])
+"SigmaH22[AN, DO, CR, DO]="-(U1*nc[d[0, 1], d[1, 1]])
+"SigmaHdAvg11="(U1*nc[d[0, 0], d[1, 0]] + U1*nc[d[0, 1], d[1, 1]])/2
+"SigmaHdAvg12="(U1*nc[d[0, 0], d[0, 1]] + U1*nc[d[1, 0], d[1, 1]])/2
+"SigmaHdAvg21="(-(U1*nc[d[0, 0], d[0, 1]]) - U1*nc[d[1, 0], d[1, 1]])/2
+"SigmaHdAvg22="(-(U1*nc[d[0, 0], d[1, 0]]) - U1*nc[d[0, 1], d[1, 1]])/2
+NRDOTS:1 CHANNELS:1 COEFCHANNELS:1
+basis:{d[], f[0]}
+Hamiltonian generated. -coefzeta[1, 0] + eps1*nc[d[0, 0], d[1, 0]] - coefV[1, 2]*nc[d[0, 0], f[0, 0, 1]] + coefV[1, 1]*nc[d[0, 0], f[1, 0, 0]] + eps1*nc[d[0, 1], d[1, 1]] + coefV[1, 2]*nc[d[0, 1], f[0, 0, 0]] + 
+   coefV[1, 1]*nc[d[0, 1], f[1, 0, 1]] + coefV[1, 2]*nc[d[1, 0], f[1, 0, 1]] - coefV[1, 2]*nc[d[1, 1], f[1, 0, 0]] + coefV[1, 1]*nc[f[0, 0, 0], d[1, 0]] - coefdelta[1, 0]*nc[f[0, 0, 0], f[0, 0, 1]] + 
+   coefzeta[1, 0]*nc[f[0, 0, 0], f[1, 0, 0]] + coefV[1, 1]*nc[f[0, 0, 1], d[1, 1]] + coefzeta[1, 0]*nc[f[0, 0, 1], f[1, 0, 1]] + coefdelta[1, 0]*nc[f[1, 0, 0], f[1, 0, 1]] - U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+SCALE[0]=1.0201394465967895
+faktor=1.3862943611198906
+Generating basis
+Wilson chain
+DISCNMAX=0
+BAND="flat" thetaCh={"2."}
+Discretization (channel 1)
+"xitable" (channel 1)
+xi(1.)(0)
+"zetatable" (channel 1)
+dzeta(1.)(0)
+Precision last xi:Infinity
+Precision last zeta: Infinity
+"scdeltatable" (channel 1)
+scdelta(1.)(0)
+"sckappatable" (channel 1)
+sckappa(1.)(0)
+Discretization done.
+thetaCh={"2."}
+theta0Ch={"0.2"}
+gammaPolCh={"0.252313252202016"}
+calcgsenergy[]
+diagvc[{1}]
+Generating matrix: ham_1
+hamil={{-coefzeta[1, 0], -coefdelta[1, 0], -(Sqrt[2]*coefV[1, 2]), 0, 0}, {-coefdelta[1, 0], coefzeta[1, 0], Sqrt[2]*coefV[1, 1], 0, 0}, {-(Sqrt[2]*coefV[1, 2]), Sqrt[2]*coefV[1, 1], eps1, Sqrt[2]*coefV[1, 1], Sqrt[2]*coefV[1, 2]}, 
+   {0, 0, Sqrt[2]*coefV[1, 1], 2*eps1 + U1 - coefzeta[1, 0], -coefdelta[1, 0]}, {0, 0, Sqrt[2]*coefV[1, 2], -coefdelta[1, 0], 2*eps1 + U1 + coefzeta[1, 0]}}
+dim={5, 5}
+diagvc[{2}]
+Generating matrix: ham_2
+hamil={{0, coefV[1, 1], coefV[1, 2], 0}, {coefV[1, 1], eps1 - coefzeta[1, 0], -coefdelta[1, 0], coefV[1, 2]}, {coefV[1, 2], -coefdelta[1, 0], eps1 + coefzeta[1, 0], -coefV[1, 1]}, {0, coefV[1, 2], -coefV[1, 1], 2*eps1 + U1}}
+dim={4, 4}
+diagvc[{3}]
+Generating matrix: ham_3
+hamil={{eps1}}
+dim={1, 1}
+Lowest energies (absolute):{1, 1, 1, 2, 2, 3, 3, 4, 4, 5}
+Lowest energies (GS shifted):{0, 0, 0, 1, 1, 2, 2, 3, 3, 4}
+Scale factor SCALE(Ninit):1.0201394465967895
+Lowest energies (shifted and scaled):{0., 0., 0., 0.9802581434685472, 0.9802581434685472, 1.9605162869370945, 1.9605162869370945, 2.9407744304056416, 2.9407744304056416, 3.921032573874189}
+makeireducf GENERAL
+Loading module operators.m
+operators.m started
+s: n_d nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]]
+s: n_d_u nc[d[0, 1], d[1, 1]]
+s: n_d_d nc[d[0, 0], d[1, 0]]
+s: n_d_ud -nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+s: n_d^2 nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]] - 2*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+s: pair_d -nc[d[0, 0], d[0, 1]]
+d: A_d d
+d: Ac_d (-1)^#2*d[1 - #1, 1 - #2] & 
+d: self_d Chop[Expand[komutator[Hselfd, d[#1, #2]]]] & 
+d: selfc_d Chop[Expand[komutator[Hselfd, (-1)^#2*d[1 - #1, 1 - #2]]]] & 
+operators.m done
+Loading module customoperators.m
+Can't load customoperators.m. Continuing.
+Loading module modeloperators.m
+s: SigmaHdAvg11 (U1*nc[d[0, 0], d[1, 0]])/2 + (U1*nc[d[0, 1], d[1, 1]])/2
+s: SigmaHdAvg22 -1/2*(U1*nc[d[0, 0], d[1, 0]]) - (U1*nc[d[0, 1], d[1, 1]])/2
+s: SigmaHdAvg12 (U1*nc[d[0, 0], d[0, 1]])/2 + (U1*nc[d[1, 0], d[1, 1]])/2
+s: SigmaHdAvg21 -1/2*(U1*nc[d[0, 0], d[0, 1]]) - (U1*nc[d[1, 0], d[1, 1]])/2
+s: SigmaHd11 U1*nc[d[0, 0], d[1, 0]]
+s: SigmaHd12 U1*nc[d[1, 0], d[1, 1]]
+s: SigmaHd21 -(U1*nc[d[0, 0], d[0, 1]])
+s: SigmaHd22 -(U1*nc[d[0, 1], d[1, 1]])
+Timing report
+{basis, 0.006859`4.287805796354462}
+{ham, 0.066052`4.794309711004125}
+{maketable, 0.312421`5.946285211651289}
+{xi, 0.002836`3.904251220007}
+{_, 0}
+data.in
+"Success!"
