@@ -1,1 +1,6 @@
 Collection of various templates and examples for NRG Ljubljana.
+
+/templates: general templates for NRG Ljubljana (to be used without the Python interface)
+/interface_templates: templates to use with the TRIQS NRG Ljubljana interface
+/examples: some usage examples
+
