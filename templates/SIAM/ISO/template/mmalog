@@ -59,6 +59,7 @@ makeireducf GENERAL
 Loading module operators.m
 operators.m started
 s: n_d nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]]
+s: n_d_ud -nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
 s: n_d^2 nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]] - 2*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
 s: hop0 nc[d[0, 0], f[1, 0, 0]] + nc[d[0, 1], f[1, 0, 1]] + nc[f[0, 0, 0], d[1, 0]] + nc[f[0, 0, 1], d[1, 1]]
 d: A_d d
@@ -69,10 +70,10 @@ Can't load customoperators.m. Continuing.
 Loading module modeloperators.m
 d: isoself_d Chop[Expand[komutator[(2*U1)*pow[isospinz[d[]], 2], d[#1, #2]]]] & 
 Timing report
-{basis, 0.024718`4.844558321397267}
-{ham, 0.0259029999999999999`4.26283506771625}
-{maketable, 0.304393`5.934979654418661}
-{xi, 0.002732`3.888025688505466}
+{basis, 0.059829`5.228456737469369}
+{ham, 0.025537`4.256654878651716}
+{maketable, 0.304055`5.9344971430126465}
+{xi, 0.002656`3.8757730641919506}
 {_, 0}
 data.in
 "Success!"

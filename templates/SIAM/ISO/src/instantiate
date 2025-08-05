@@ -31,7 +31,7 @@ while (<F>) {
 close O if $section ne "";
 close F;	
 
-system "./wilson";
+# system "./wilson";
 my $nr = getparam("Nmax");
 
 ### Translate data.in -> data
