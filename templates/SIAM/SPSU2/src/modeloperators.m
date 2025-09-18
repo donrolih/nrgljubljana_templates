@@ -1,6 +1,7 @@
 Module[{t},
   t = {};
   MPVCFAST = False;
+  t = Join[t, mtSingletOp["Hint", Hint]];
   t = Join[t, mtSingletOp["SigmaHdAvg11",   SigmaHdAvg11 ]];
   t = Join[t, mtSingletOp["SigmaHdAvg22",   SigmaHdAvg22 ]];
   t = Join[t, mtSingletOp["SigmaHdAvg12",   SigmaHdAvg12 ]];

@@ -40,6 +40,22 @@ f 0 0
 e
 1
 # Irreducible matrix elements for other operators:
+sHimp
+3
+1	1
+op.Himp_1_1
+2	2
+op.Himp_2_2
+3	3
+op.Himp_3_3
+sHhyb
+3
+1	1
+op.Hhyb_1_1
+2	2
+op.Hhyb_2_2
+3	3
+op.Hhyb_3_3
 sn_d
 3
 1	1
@@ -128,6 +144,14 @@ op.selfc_d_2_3
 op.selfc_d_2_1
 1	2
 op.selfc_d_1_2
+sHint
+3
+1	1
+op.Hint_1_1
+2	2
+op.Hint_2_2
+3	3
+op.Hint_3_3
 sSigmaHdAvg11
 3
 1	1

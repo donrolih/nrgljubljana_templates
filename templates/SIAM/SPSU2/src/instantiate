@@ -10,8 +10,8 @@ use File::Copy;
 use Math::Trig;
 
 # Paths to tools used
-my $matrix = "matrix -s"; # Convert symbolic matrix to numerical matrix
-my $diag = "diag -B"; # Diagonalization tool
+my $matrix = "matrix -s";   # Convert symbolic matrix to numerical matrix
+my $diag = "diag -B";       # Diagonalization tool
 my $unitary = "unitary -B"; # Unitary transformation tool
 
 my $verbose = 1;
@@ -34,7 +34,6 @@ close F;
 
 # Compute Wilson chain coefficients
 # system "./wilson";
-# NO: we assume they are already computed
 my $nr = getparam("Nmax");
 
 ### Begin the data.in -> data translation:
@@ -162,7 +161,7 @@ while (<F>) {
     }
 }
 
-# Append the Wilson chain coefficients
+# Append the Wilson chain coefficients (normal terms)
 print OUT "z\n";
 for (my $ch = 1; $ch <= $perch*$channels; $ch++) {
     print OUT "$nr\n";
@@ -174,6 +173,9 @@ for (my $ch = 1; $ch <= $perch*$channels; $ch++) {
     my $zeta = `cat zeta${ch}.dat`;
     print OUT "$zeta";
 }
+
+# Append the Wilson chain coefficients (superconducting terms)
+print OUT "Z\n";
 for (my $ch = 1; $ch <= $perch*$channels; $ch++) {
     print OUT "$nr\n";
     my $scdelta = `cat scdelta${ch}.dat`;
