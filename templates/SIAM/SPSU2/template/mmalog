@@ -85,6 +85,7 @@ s: n_d^2 nc[d[0, 0], d[1, 0]] + nc[d[0, 1], d[1, 1]] - 2*nc[d[0, 0], d[0, 1], d[
 s: pair_d -nc[d[0, 0], d[0, 1]]
 d: A_d d
 d: Ac_d (-1)^#2*d[1 - #1, 1 - #2] & 
+t: sigma_d d[]
 d: self_d Chop[Expand[komutator[Hselfd, d[#1, #2]]]] & 
 d: selfc_d Chop[Expand[komutator[Hselfd, (-1)^#2*d[1 - #1, 1 - #2]]]] & 
 operators.m done
@@ -101,10 +102,10 @@ s: SigmaHd12 U1*nc[d[1, 0], d[1, 1]]
 s: SigmaHd21 -(U1*nc[d[0, 0], d[0, 1]])
 s: SigmaHd22 -(U1*nc[d[0, 1], d[1, 1]])
 Timing report
-{basis, 0.006529`4.266391662100434}
-{ham, 0.065461`4.79040637419933}
-{maketable, 0.45564`6.110166836683393}
-{xi, 0.002767`3.8935541526369253}
+{basis, 0.008049`4.357286920887574}
+{ham, 0.090112`4.929206367566292}
+{maketable, 0.563833`6.202695484149134}
+{xi, 0.003037`3.933989785414238}
 {_, 0}
 data.in
 "Success!"
