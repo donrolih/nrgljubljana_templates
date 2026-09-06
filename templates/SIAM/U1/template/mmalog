@@ -1,0 +1,273 @@
+NRG Ljubljana 2026.06 (c) Rok Zitko, rok.zitko@ijs.si
+Mathematica version: 13.3.0 for Linux x86 (64-bit) (June 3, 2023)
+sneg version: 2.1
+Loading module initialparse.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Loading module sym.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Options: {GENERATE_TEMPLATE, GENERATE_TEMPLATE_ALL}
+Loading module models.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+models started
+Loading module custommodels.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Can't load custommodels.m. Continuing.
+Loading module SIAM.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+def1ch, NRDOTS=1
+H0=coefzeta[2, 0]*(-1/2 + nc[f[0, 0, 0], f[1, 0, 0]]) + coefzeta[4, 0]*nc[f[0, 0, 0], f[1, 0, 1]] + coefzeta[3, 0]*nc[f[0, 0, 1], f[1, 0, 0]] + coefzeta[1, 0]*(-1/2 + nc[f[0, 0, 1], f[1, 0, 1]])
+"Hhyb="coefV[2, 2]*nc[d[0, 0], f[1, 0, 0]] + coefV[1, 2]*nc[d[0, 0], f[1, 0, 1]] + coefV[2, 1]*nc[d[0, 1], f[1, 0, 0]] + coefV[1, 1]*nc[d[0, 1], f[1, 0, 1]] + coefV[2, 2]*nc[f[0, 0, 0], d[1, 0]] + coefV[2, 1]*nc[f[0, 0, 0], d[1, 1]] + 
+   coefV[1, 2]*nc[f[0, 0, 1], d[1, 0]] + coefV[1, 1]*nc[f[0, 0, 1], d[1, 1]]
+"SigmaHartree[UP,UP]="-nc[d[0, 1], d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + nc[d[0, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 1]] - nc[d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1]] - 
+   nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1], d[1, 1]] + U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+"SigmaHartree[DO,DO]="-nc[d[0, 0], d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + nc[d[0, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 0]] - nc[d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0]] - 
+   nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0], d[1, 0]] + U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+"SigmaHartree[UP,DO]="-nc[d[0, 1], d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + nc[d[0, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 0]] - nc[d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1]] - 
+   nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1], d[1, 0]]
+"SigmaHartree[DO,UP]="-nc[d[0, 0], d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + nc[d[0, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 1]] - nc[d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0]] - 
+   nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0], d[1, 1]]
+"SigmaHartree="-1/2*nc[d[0, 0], d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]] + nc[d[0, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 0]]/2 - nc[d[0, 1], d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]]/2 + 
+   nc[d[0, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[1, 1]]/2 - nc[d[1, 0], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0]]/2 - nc[d[1, 1], U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1]]/2 - 
+   nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 0], d[1, 0]]/2 - nc[U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]], d[0, 1], d[1, 1]]/2 + U1*nc[d[0, 0], d[0, 1], d[1, 0], d[1, 1]]
+NRDOTS:1 CHANNELS:1 COEFCHANNELS:4
+basis:{d[], f[0]}
+SCALE[0]=1.0201394465967895
+faktor=1.3862943611198906
+Generating basis
+Wilson chain
+DISCNMAX=0
+BAND="flat" thetaCh={"2.", "2.", "2.", "2."}
+Discretization (channel 1)
+"xitable" (channel 1)
+xi(1.)(0)
+"zetatable" (channel 1)
+dzeta(1.)(0)
+Precision last xi:Infinity
+Precision last zeta: Infinity
+Discretization (channel 2)
+"xitable" (channel 2)
+xi(2.)(0)
+"zetatable" (channel 2)
+dzeta(2.)(0)
+Precision last xi:Infinity
+Precision last zeta: Infinity
+Discretization (channel 3)
+"xitable" (channel 3)
+xi(3.)(0)
+"zetatable" (channel 3)
+dzeta(3.)(0)
+Precision last xi:Infinity
+Precision last zeta: Infinity
+Discretization (channel 4)
+"xitable" (channel 4)
+xi(4.)(0)
+"zetatable" (channel 4)
+dzeta(4.)(0)
+Precision last xi:Infinity
+Precision last zeta: Infinity
+Discretization done.
+{HoldPattern[lastf[ch_]] :> If[Ninit == 0, f[ch], f[ch, Ninit]]}
+thetaCh={"2.", "2.", "2.", "2."}
+theta0Ch={"0.2", "0.2", "0.2", "0.2"}
+gammaPolCh={"0.252313252202016", "0.252313252202016", "0.252313252202016", "0.252313252202016"}
+calcgsenergy[]
+diagvc[{-2}]
+Generating matrix: ham_-2
+Writing ham_-2
+dim={1, 1}
+diagvc[{-1}]
+Generating matrix: ham_-1
+Writing ham_-1
+dim={4, 4}
+diagvc[{0}]
+Generating matrix: ham_0
+Writing ham_0
+dim={6, 6}
+diagvc[{1}]
+Generating matrix: ham_1
+Writing ham_1
+dim={4, 4}
+diagvc[{2}]
+Generating matrix: ham_2
+Writing ham_2
+dim={1, 1}
+Lowest energies:{1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 6}
+Lowest energies (GS shifted):{0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 5}
+Scale factor SCALE(Ninit):1.0201394465967895
+Lowest energies (GS shifted and scaled):{0., 0., 0., 0., 0., 0.9802581434685472, 0.9802581434685472, 0.9802581434685472, 1.9605162869370945, 1.9605162869370945, 1.9605162869370945, 2.9407744304056416, 2.9407744304056416, 
+   2.9407744304056416, 3.921032573874189, 4.901290717342736}
+GSenergy=1
+makeireducf U1
+Generating f table. op=f[0] cp={{2}, {1}}
+Writing opf0.0_2_1
+el[1,1]=0.
+Generating f table. op=f[0] cp={{1}, {0}}
+Writing opf0.0_1_0
+el[1,1]=0.
+Generating f table. op=f[0] cp={{0}, {-1}}
+Writing opf0.0_0_-1
+el[1,1]=1.
+Generating f table. op=f[0] cp={{-1}, {-2}}
+Writing opf0.0_-1_-2
+el[1,1]=0.
+Generating f table. op=f[0] cp={{2}, {1}}
+Writing opf0.1_2_1
+el[1,1]=0.
+Generating f table. op=f[0] cp={{1}, {0}}
+Writing opf0.1_1_0
+el[1,1]=0.
+Generating f table. op=f[0] cp={{0}, {-1}}
+Writing opf0.1_0_-1
+el[1,1]=0.
+Generating f table. op=f[0] cp={{-1}, {-2}}
+Writing opf0.1_-1_-2
+el[1,1]=1.
+Loading module operators.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+operators.m started
+s: n_d HoldComplete[number[d[]]]
+Writing op.n_d_-2_-2
+Writing op.n_d_-1_-1
+Writing op.n_d_0_0
+Writing op.n_d_1_1
+Writing op.n_d_2_2
+Writing op.n_d
+s: n_d_u HoldComplete[number[d[], UP]]
+Writing op.n_d_u_-2_-2
+Writing op.n_d_u_-1_-1
+Writing op.n_d_u_0_0
+Writing op.n_d_u_1_1
+Writing op.n_d_u_2_2
+Writing op.n_d_u
+s: n_d_d HoldComplete[number[d[], DO]]
+Writing op.n_d_d_-2_-2
+Writing op.n_d_d_-1_-1
+Writing op.n_d_d_0_0
+Writing op.n_d_d_1_1
+Writing op.n_d_d_2_2
+Writing op.n_d_d
+s: n_d_ud HoldComplete[nc[number[d[], DO], number[d[], UP]]]
+Writing op.n_d_ud_-2_-2
+Writing op.n_d_ud_-1_-1
+Writing op.n_d_ud_0_0
+Writing op.n_d_ud_1_1
+Writing op.n_d_ud_2_2
+Writing op.n_d_ud
+s: n_d^2 HoldComplete[pow[number[d[]], 2]]
+Writing op.n_d^2_-2_-2
+Writing op.n_d^2_-1_-1
+Writing op.n_d^2_0_0
+Writing op.n_d^2_1_1
+Writing op.n_d^2_2_2
+Writing op.n_d^2
+s: hop0 HoldComplete[hop[f[0], d[]]]
+Writing op.hop0_-2_-2
+Writing op.hop0_-1_-1
+Writing op.hop0_0_0
+Writing op.hop0_1_1
+Writing op.hop0_2_2
+Writing op.hop0
+d: A_d_u HoldComplete[d[#1, #2] & ]
+Generating f table. op=d[#1, #2] &  cp={{2}, {1}}
+Writing op.A_d_u_2_1
+el[1,1]=1.
+Generating f table. op=d[#1, #2] &  cp={{1}, {0}}
+Writing op.A_d_u_1_0
+el[1,1]=0.
+Generating f table. op=d[#1, #2] &  cp={{0}, {-1}}
+Writing op.A_d_u_0_-1
+el[1,1]=0.
+Generating f table. op=d[#1, #2] &  cp={{-1}, {-2}}
+Writing op.A_d_u_-1_-2
+el[1,1]=0.
+Writing op.A_d_u
+d: A_d_d HoldComplete[d[#1, #2] & ]
+Generating f table. op=d[#1, #2] &  cp={{2}, {1}}
+Writing op.A_d_d_2_1
+el[1,1]=0.
+Generating f table. op=d[#1, #2] &  cp={{1}, {0}}
+Writing op.A_d_d_1_0
+el[1,1]=1.
+Generating f table. op=d[#1, #2] &  cp={{0}, {-1}}
+Writing op.A_d_d_0_-1
+el[1,1]=0.
+Generating f table. op=d[#1, #2] &  cp={{-1}, {-2}}
+Writing op.A_d_d_-1_-2
+el[1,1]=0.
+Writing op.A_d_d
+d: self_d_u HoldComplete[Chop[Expand[komutator[Hint, d[#1, #2]]]] & ]
+Generating f table. op=Chop[Expand[komutator[Hint, d[#1, #2]]]] &  cp={{2}, {1}}
+Writing op.self_d_u_2_1
+el[1,1]=1.*U1
+Generating f table. op=Chop[Expand[komutator[Hint, d[#1, #2]]]] &  cp={{1}, {0}}
+Writing op.self_d_u_1_0
+el[1,1]=0.
+Generating f table. op=Chop[Expand[komutator[Hint, d[#1, #2]]]] &  cp={{0}, {-1}}
+Writing op.self_d_u_0_-1
+el[1,1]=0.
+Generating f table. op=Chop[Expand[komutator[Hint, d[#1, #2]]]] &  cp={{-1}, {-2}}
+Writing op.self_d_u_-1_-2
+el[1,1]=0.
+Writing op.self_d_u
+d: self_d_d HoldComplete[Chop[Expand[komutator[Hint, d[#1, #2]]]] & ]
+Generating f table. op=Chop[Expand[komutator[Hint, d[#1, #2]]]] &  cp={{2}, {1}}
+Writing op.self_d_d_2_1
+el[1,1]=0.
+Generating f table. op=Chop[Expand[komutator[Hint, d[#1, #2]]]] &  cp={{1}, {0}}
+Writing op.self_d_d_1_0
+el[1,1]=0.
+Generating f table. op=Chop[Expand[komutator[Hint, d[#1, #2]]]] &  cp={{0}, {-1}}
+Writing op.self_d_d_0_-1
+el[1,1]=0.
+Generating f table. op=Chop[Expand[komutator[Hint, d[#1, #2]]]] &  cp={{-1}, {-2}}
+Writing op.self_d_d_-1_-2
+el[1,1]=0.
+Writing op.self_d_d
+s: SXd HoldComplete[spinx[d[]]]
+Writing op.SXd_-2_-2
+Writing op.SXd_-1_-1
+Writing op.SXd_0_0
+Writing op.SXd_1_1
+Writing op.SXd_2_2
+Writing op.SXd
+s: SZd HoldComplete[spinz[d[]]]
+Writing op.SZd_-2_-2
+Writing op.SZd_-1_-1
+Writing op.SZd_0_0
+Writing op.SZd_1_1
+Writing op.SZd_2_2
+Writing op.SZd
+operators.m done
+Loading module customoperators.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Can't load customoperators.m. Continuing.
+Loading module modeloperators.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+s: SigmaHartree-uu HoldComplete[SigmaHartree[UP, UP]]
+Writing op.SigmaHartree-uu_-2_-2
+Writing op.SigmaHartree-uu_-1_-1
+Writing op.SigmaHartree-uu_0_0
+Writing op.SigmaHartree-uu_1_1
+Writing op.SigmaHartree-uu_2_2
+Writing op.SigmaHartree-uu
+s: SigmaHartree-dd HoldComplete[SigmaHartree[DO, DO]]
+Writing op.SigmaHartree-dd_-2_-2
+Writing op.SigmaHartree-dd_-1_-1
+Writing op.SigmaHartree-dd_0_0
+Writing op.SigmaHartree-dd_1_1
+Writing op.SigmaHartree-dd_2_2
+Writing op.SigmaHartree-dd
+s: SigmaHartree-ud HoldComplete[SigmaHartree[UP, DO]]
+Writing op.SigmaHartree-ud_-2_-2
+Writing op.SigmaHartree-ud_-1_-1
+Writing op.SigmaHartree-ud_0_0
+Writing op.SigmaHartree-ud_1_1
+Writing op.SigmaHartree-ud_2_2
+Writing op.SigmaHartree-ud
+s: SigmaHartree-du HoldComplete[SigmaHartree[DO, UP]]
+Writing op.SigmaHartree-du_-2_-2
+Writing op.SigmaHartree-du_-1_-1
+Writing op.SigmaHartree-du_0_0
+Writing op.SigmaHartree-du_1_1
+Writing op.SigmaHartree-du_2_2
+Writing op.SigmaHartree-du
+Timing report
+{basis, 0.003268`3.9658270413563486}
+{ham, 0.099831`4.751840410591665}
+{maketable, 0.228755`5.810915588906275}
+{xi, 0.008333`4.372346375321629}
+{_, 0}
+data.in
+"Success!"
