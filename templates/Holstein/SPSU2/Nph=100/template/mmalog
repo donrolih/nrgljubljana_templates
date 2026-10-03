@@ -1,0 +1,168 @@
+NRG Ljubljana 2026.09 (c) Rok Zitko, rok.zitko@ijs.si
+Mathematica version: 13.3.0 for Linux x86 (64-bit) (June 3, 2023)
+sneg version: 2.1
+Loading module initialparse.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Loading module sym.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Loading module floquet.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Options: {GENERATE_TEMPLATE, GENERATE_TEMPLATE_ALL, GENERATE_TEMPLATE_F, Nph=100}
+Loading module models.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+models started
+Loading module custommodels.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Can't load custommodels.m. Continuing.
+Loading module model.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+def1ch, NRDOTS=1
+H0=-(coefdelta[1, 0]*nc[f[0, 0, 0], f[0, 0, 1]]) + coefzeta[1, 0]*(-1 + nc[f[0, 0, 0], f[1, 0, 0]] + nc[f[0, 0, 1], f[1, 0, 1]]) + Conjugate[coefdelta[1, 0]]*nc[f[1, 0, 0], f[1, 0, 1]]
+NRDOTS:1 CHANNELS:1 COEFCHANNELS:1
+basis:{d[], f[0]}
+SCALE[0]=1.0201394465967895
+faktor=1.3862943611198906
+Generating basis
+MAKEPHONON=1
+Adding phonons, cutoffs={100}
+Wilson chain
+DISCNMAX=0
+BAND="flat" thetaCh={"2."}
+Discretization (channel 1)
+"xitable" (channel 1)
+xi(1.)(0)
+"zetatable" (channel 1)
+dzeta(1.)(0)
+Precision last xi:Infinity
+Precision last zeta: Infinity
+"scdeltatable" (channel 1)
+scdelta(1.)(0)
+"sckappatable" (channel 1)
+sckappa(1.)(0)
+Discretization done.
+{HoldPattern[lastf[ch_]] :> If[Ninit == 0, f[ch], f[ch, Ninit]]}
+thetaCh={"2."}
+theta0Ch={"0.2"}
+gammaPolCh={"0.252313252202016"}
+calcgsenergy[]
+diagvc[{1}]
+Generating matrix: ham_1
+Writing ham_1
+dim={505, 505}
+diagvc[{2}]
+Generating matrix: ham_2
+Writing ham_2
+dim={404, 404}
+diagvc[{3}]
+Generating matrix: ham_3
+Writing ham_3
+dim={101, 101}
+Lowest energies:{1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7}
+Lowest energies (GS shifted):{0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6}
+Scale factor SCALE(Ninit):1.0201394465967895
+Lowest energies (GS shifted and scaled):{0., 0., 0., 0.9802581434685472, 0.9802581434685472, 0.9802581434685472, 1.9605162869370945, 1.9605162869370945, 1.9605162869370945, 2.9407744304056416, 2.9407744304056416, 2.9407744304056416, 
+   3.921032573874189, 3.921032573874189, 3.921032573874189, 4.901290717342736, 4.901290717342736, 4.901290717342736, 5.881548860811283, 5.881548860811283}
+GSenergy=1
+makeireducf GENERAL
+Generating f table. op=f[0] cp={{3}, {2}}
+Writing opf0_3_2
+el[1,1]=0.
+Generating f table. op=f[0] cp={{2}, {3}}
+Writing opf0_2_3
+el[1,1]=0.
+Generating f table. op=f[0] cp={{2}, {1}}
+Writing opf0_2_1
+el[1,1]=1.
+Generating f table. op=f[0] cp={{1}, {2}}
+Writing opf0_1_2
+el[1,1]=0.
+Loading module operators.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+operators.m started
+s: q_d HoldComplete[number[d[]] - 1]
+Writing op.q_d_1_1
+Writing op.q_d_2_2
+Writing op.q_d_3_3
+Writing op.q_d
+s: q_d^2 HoldComplete[pow[number[d[]] - 1, 2]]
+Writing op.q_d^2_1_1
+Writing op.q_d^2_2_2
+Writing op.q_d^2_3_3
+Writing op.q_d^2
+s: pair_d HoldComplete[nc[d[CR, UP], d[CR, DO]]]
+Writing op.pair_d_1_1
+Writing op.pair_d_2_2
+Writing op.pair_d_3_3
+Writing op.pair_d
+s: nph HoldComplete[phononnumber[nph]]
+Writing op.nph_1_1
+Writing op.nph_2_2
+Writing op.nph_3_3
+Writing op.nph
+s: displ HoldComplete[displop]
+Writing op.displ_1_1
+Writing op.displ_2_2
+Writing op.displ_3_3
+Writing op.displ
+s: displ^2 HoldComplete[pow[displop, 2]]
+Writing op.displ^2_1_1
+Writing op.displ^2_2_2
+Writing op.displ^2_3_3
+Writing op.displ^2
+operators.m done
+Loading module customoperators.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+Can't load customoperators.m. Continuing.
+Loading module modeloperators.m path: {~, ., .., /home/drolih/opt/nrgljubljana-foss-2026.1/nrginit, ~/nrg}
+modelops begin
+s: PR0 HoldComplete[PR[0]]
+Writing op.PR0_1_1
+Writing op.PR0_2_2
+Writing op.PR0_3_3
+Writing op.PR0
+s: PR1 HoldComplete[PR[1]]
+Writing op.PR1_1_1
+Writing op.PR1_2_2
+Writing op.PR1_3_3
+Writing op.PR1
+s: PR2 HoldComplete[PR[2]]
+Writing op.PR2_1_1
+Writing op.PR2_2_2
+Writing op.PR2_3_3
+Writing op.PR2
+s: PR3 HoldComplete[PR[3]]
+Writing op.PR3_1_1
+Writing op.PR3_2_2
+Writing op.PR3_3_3
+Writing op.PR3
+s: PR4 HoldComplete[PR[4]]
+Writing op.PR4_1_1
+Writing op.PR4_2_2
+Writing op.PR4_3_3
+Writing op.PR4
+s: PRlast HoldComplete[PRlast]
+Writing op.PRlast_1_1
+Writing op.PRlast_2_2
+Writing op.PRlast_3_3
+Writing op.PRlast
+s: nphsign HoldComplete[nphsign]
+Writing op.nphsign_1_1
+Writing op.nphsign_2_2
+Writing op.nphsign_3_3
+Writing op.nphsign
+s: sigmax HoldComplete[sigmax]
+Writing op.sigmax_1_1
+Writing op.sigmax_2_2
+Writing op.sigmax_3_3
+Writing op.sigmax
+s: sigmaz HoldComplete[sigmaz]
+Writing op.sigmaz_1_1
+Writing op.sigmaz_2_2
+Writing op.sigmaz_3_3
+Writing op.sigmaz
+s: par HoldComplete[par]
+Writing op.par_1_1
+Writing op.par_2_2
+Writing op.par_3_3
+Writing op.par
+modelops end
+Timing report
+{basis, 0.385329`6.037376688898876}
+{ham, 4469.459168`9.624678712788866}
+{maketable, 6549.180764`10.26773197105629}
+{xi, 0.002566`3.8608016455348824}
+{_, 0}
+data.in
+"Success!"
