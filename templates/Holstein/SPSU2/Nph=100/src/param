@@ -1,0 +1,16 @@
+# Rename param.template to param, then run "nrginit".
+
+[extra]
+#U=
+#delta=
+#omega=
+#g=
+
+[param]
+options=GENERATE_TEMPLATE GENERATE_TEMPLATE_ALL GENERATE_TEMPLATE_F Nph=100
+symtype=SPSU2
+model=model.m
+
+ops=q_d q_d^2 pair_d nph displ displ^2 PR0 PR1 PR2 PR3 PR4 PRlast nphsign sigmax sigmaz par
+
+data_has_rescaled_energies=false
